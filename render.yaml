@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: lich-am-website
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    healthCheckPath: /up
+    envVars:
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: APP_HOST
+        sync: false
+      - key: SUPPORT_EMAIL
+        value: support@lighton.app
+      - key: APP_LATEST_VERSION
+        value: "1.0.0"
+      - key: APP_FORCE_UPDATE
+        value: "false"
+      - key: APP_RELEASE_NOTES
+        value: ""
+      - key: APP_STORE_URL
+        sync: false

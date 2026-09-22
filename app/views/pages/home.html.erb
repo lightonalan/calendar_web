@@ -1,0 +1,111 @@
+<% content_for :title, "Lịch Âm — Lịch vạn niên, văn khấn & sự kiện" %>
+
+<section class="relative overflow-hidden bg-gradient-to-b from-amber-50 via-white to-stone-50 pt-28">
+  <div class="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl"></div>
+  <div class="pointer-events-none absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-red-200/30 blur-3xl"></div>
+
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:py-24">
+    <div>
+      <p class="inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-800">
+        Ứng dụng lịch cho người Việt
+      </p>
+      <h1 class="mt-5 text-4xl font-bold leading-tight text-stone-900 md:text-5xl">
+        Lịch Âm — ngày tốt, giờ đẹp, văn khấn trong tầm tay
+      </h1>
+      <p class="mt-5 text-lg leading-relaxed text-stone-600">
+        Tra cứu lịch âm dương, giờ hoàng đạo, xem quẻ, quản lý sự kiện và hồ sơ khấn — gọn nhẹ, dễ dùng mỗi ngày.
+      </p>
+
+      <div id="download" class="mt-8 flex flex-wrap gap-4">
+        <a href="https://play.google.com/store/apps/details?id=com.lighton.calendar"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 rounded-2xl bg-stone-900 px-6 py-3 text-white shadow-lg hover:bg-stone-800 transition">
+          <span class="text-2xl">▶</span>
+          <span>
+            <span class="block text-xs opacity-80">Tải trên</span>
+            <span class="block font-semibold">Google Play</span>
+          </span>
+        </a>
+        <span class="inline-flex items-center gap-3 rounded-2xl border border-stone-200 bg-white px-6 py-3 text-stone-400">
+          <span class="text-2xl"></span>
+          <span>
+            <span class="block text-xs">Sắp có trên</span>
+            <span class="block font-semibold">App Store</span>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-sm">
+      <div class="rounded-[2rem] border border-amber-100 bg-white p-6 shadow-2xl shadow-amber-100/50">
+        <div class="rounded-3xl bg-gradient-to-br from-red-700 via-amber-600 to-amber-400 p-6 text-white">
+          <p class="text-sm opacity-90">Hôm nay</p>
+          <p class="mt-2 text-3xl font-bold">Mùng 3 · Tháng 6</p>
+          <p class="mt-1 text-sm opacity-90">Giáp Thìn · Ngày tốt</p>
+          <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+            <div class="rounded-xl bg-white/15 p-3 backdrop-blur">
+              <p class="opacity-80">Giờ hoàng đạo</p>
+              <p class="font-semibold">7h – 9h</p>
+            </div>
+            <div class="rounded-xl bg-white/15 p-3 backdrop-blur">
+              <p class="opacity-80">Tuổi xung</p>
+              <p class="font-semibold">Tuất</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 space-y-3">
+          <div class="flex items-center gap-3 rounded-xl bg-stone-50 p-3">
+            <span class="text-xl">📅</span>
+            <div>
+              <p class="font-medium">Sự kiện & nhắc nhở</p>
+              <p class="text-xs text-stone-500">Giỗ, lễ, sinh nhật</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 rounded-xl bg-stone-50 p-3">
+            <span class="text-xl">🙏</span>
+            <div>
+              <p class="font-medium">Văn khấn truyền thống</p>
+              <p class="text-xs text-stone-500">Tra cứu nhanh theo dịp</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="mx-auto max-w-6xl px-5 py-20">
+  <div class="text-center">
+    <h2 class="text-3xl font-bold text-stone-900">Tính năng nổi bật</h2>
+    <p class="mx-auto mt-3 max-w-2xl text-stone-600">Mọi thứ bạn cần cho một ngày làm việc và sinh hoạt theo lịch truyền thống.</p>
+  </div>
+
+  <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <% [
+      ["📆", "Lịch âm dương", "Xem ngày âm, can chi, tiết khí và thông tin ngày chi tiết."],
+      ["✨", "Giờ hoàng đạo", "Biết giờ tốt trong ngày để sắp xếp việc quan trọng."],
+      ["🔮", "Xem quẻ", "Gợi ý quẻ theo ngày — tham khảo nhanh, tiện lợi."],
+      ["🙏", "Văn khấn", "Kho văn khấn truyền thống được phân loại theo dịp."],
+      ["📋", "Hồ sơ khấn", "Lưu thông tin gia đình, ngày giỗ và lễ quan trọng."],
+      ["🔔", "Nhắc sự kiện", "Không bỏ lỡ ngày giỗ, lễ Tết hay sự kiện cá nhân."]
+    ].each do |icon, title, desc| %>
+      <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+        <div class="text-3xl"><%= icon %></div>
+        <h3 class="mt-4 text-lg font-semibold text-stone-900"><%= title %></h3>
+        <p class="mt-2 text-sm leading-relaxed text-stone-600"><%= desc %></p>
+      </article>
+    <% end %>
+  </div>
+</section>
+
+<section class="bg-gradient-to-r from-amber-700 to-red-700 py-16 text-white">
+  <div class="mx-auto max-w-4xl px-5 text-center">
+    <h2 class="text-3xl font-bold">Bắt đầu miễn phí hôm nay</h2>
+    <p class="mt-4 text-amber-100">Tải Lịch Âm và đồng bộ lịch âm dương trên điện thoại của bạn.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.lighton.calendar"
+       target="_blank" rel="noopener"
+       class="mt-8 inline-block rounded-full bg-white px-8 py-3 font-semibold text-amber-800 shadow-lg hover:bg-amber-50 transition">
+      Tải trên Google Play
+    </a>
+  </div>
+</section>
