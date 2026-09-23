@@ -9,7 +9,7 @@
     "ios": null
   },
   "support_email": "support@lighton.app",
-  "support_url": "../support/",
-  "privacy_url": "../privacy/",
-  "terms_url": "../terms/"
+  "support_url": "https://lightonalan.github.io/calendar_web/support/",
+  "privacy_url": "https://lightonalan.github.io/calendar_web/privacy/",
+  "terms_url": "https://lightonalan.github.io/calendar_web/terms/"
 }
