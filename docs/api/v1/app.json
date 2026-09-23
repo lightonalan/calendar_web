@@ -1,0 +1,15 @@
+{
+  "name": "Lịch Âm",
+  "package": "com.lighton.calendar",
+  "version": "1.0.0",
+  "force_update": false,
+  "release_notes": "",
+  "store_urls": {
+    "android": "https://play.google.com/store/apps/details?id=com.lighton.calendar",
+    "ios": null
+  },
+  "support_email": "support@lighton.app",
+  "support_url": "../support/",
+  "privacy_url": "../privacy/",
+  "terms_url": "../terms/"
+}
