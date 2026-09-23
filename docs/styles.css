@@ -38,11 +38,6 @@ a { color: inherit; }
 }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
 .brand { display: flex; align-items: center; gap: .75rem; font-weight: 600; color: var(--amber-900); text-decoration: none; }
-.logo {
-  width: 2.5rem; height: 2.5rem; border-radius: .75rem;
-  background: linear-gradient(135deg, #f59e0b, #dc2626);
-  color: #fff; display: grid; place-items: center; font-weight: 700;
-}
 .nav-links { display: none; gap: 1.5rem; font-size: .9rem; color: var(--stone-600); }
 .nav-links a { text-decoration: none; }
 .nav-links a:hover { color: var(--amber-700); }
