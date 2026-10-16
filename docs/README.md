@@ -1,4 +1,4 @@
-# GitHub Pages — Lịch Âm
+# GitHub Pages — Lịch Vạn Niên
 
 Site tĩnh, không sleep. Sau khi bật Pages:
 

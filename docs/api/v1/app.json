@@ -1,5 +1,5 @@
 {
-  "name": "Lịch Âm",
+  "name": "Lịch Vạn Niên",
   "package": "com.lighton.calendar",
   "version": "1.0.0",
   "force_update": false,
@@ -9,7 +9,7 @@
     "ios": null
   },
   "support_email": "support@lighton.app",
-  "support_url": "https://lightonalan.github.io/calendar_web/support/",
-  "privacy_url": "https://lightonalan.github.io/calendar_web/privacy/",
-  "terms_url": "https://lightonalan.github.io/calendar_web/terms/"
+  "support_url": "https://lightonalan.github.io/support/",
+  "privacy_url": "https://lightonalan.github.io/privacy/",
+  "terms_url": "https://lightonalan.github.io/terms/"
 }

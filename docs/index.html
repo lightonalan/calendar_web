@@ -3,16 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lịch Âm — Lịch vạn niên, văn khấn & sự kiện</title>
-  <meta name="description" content="Ứng dụng lịch âm dương, giờ hoàng đạo, văn khấn truyền thống, xem quẻ và quản lý sự kiện cho người Việt.">
+  <title>Lịch Vạn Niên — Lịch âm dương, văn khấn & sự kiện</title>
+  <meta name="description" content="Lịch Vạn Niên: xem ngày âm dương, giờ hoàng đạo, văn khấn truyền thống, xem quẻ và nhắc sự kiện cho người Việt.">
+  <meta property="og:title" content="Lịch Vạn Niên">
+  <meta property="og:description" content="Ngày tốt, giờ đẹp, văn khấn — trên điện thoại của bạn.">
+  <meta property="og:image" content="https://lightonalan.github.io/icon.png">
   <link rel="icon" href="icon.png?v=2" type="image/png">
   <link rel="apple-touch-icon" href="icon.png?v=2">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
+  <header class="site-header">
     <nav class="wrap nav">
-      <a class="brand" href="./">Lịch Âm</a>
+      <a class="brand" href="./">
+        <img src="icon.png" alt="" width="36" height="36">
+        Lịch Vạn Niên
+      </a>
       <div class="nav-links">
         <a href="#features">Tính năng</a>
         <a href="#download">Tải app</a>
@@ -24,64 +30,80 @@
   </header>
 
   <section class="hero">
-    <div class="wrap row two">
-      <div>
-        <p class="badge">ỨNG DỤNG LỊCH CHO NGƯỜI VIỆT</p>
-        <h1>Lịch Âm — ngày tốt, giờ đẹp, văn khấn trong tầm tay</h1>
-        <p class="muted">Tra cứu lịch âm dương, giờ hoàng đạo, xem quẻ, quản lý sự kiện và hồ sơ khấn — gọn nhẹ, dễ dùng mỗi ngày.</p>
-        <div id="download" style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:1rem">
-          <a class="btn" style="background:#1c1917;border-radius:1rem;padding:.9rem 1.4rem" href="https://play.google.com/store/apps/details?id=com.lighton.calendar" target="_blank" rel="noopener">Tải trên Google Play</a>
-          <span class="card" style="color:#a8a29e">Sắp có trên App Store</span>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 class="hero-brand">Lịch Vạn Niên</h1>
+        <p class="hero-lead">Ngày tốt, giờ đẹp, văn khấn — gọn trong một ứng dụng cho người Việt.</p>
+        <div class="hero-actions" id="download">
+          <a class="btn btn-dark" href="https://play.google.com/store/apps/details?id=com.lighton.calendar" target="_blank" rel="noopener">Google Play</a>
+          <span class="btn btn-ghost" aria-disabled="true">App Store · sắp có</span>
         </div>
       </div>
-      <div class="card">
-        <div style="background:linear-gradient(135deg,#b91c1c,#d97706);color:#fff;border-radius:1.25rem;padding:1.25rem">
-          <p>Hôm nay</p>
-          <p style="font-size:1.8rem;font-weight:700;margin:.4rem 0">Mùng 3 · Tháng 6</p>
-          <p>Giáp Thìn · Ngày tốt</p>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orb">
+          <div class="hero-orb-day">
+            <small>Âm lịch</small>
+            <strong>15</strong>
+            <span>Tháng Giêng</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="features" class="wrap" style="padding:3.5rem 1.25rem">
-    <h2 style="text-align:center">Tính năng nổi bật</h2>
-    <p class="muted" style="text-align:center">Mọi thứ bạn cần cho một ngày theo lịch truyền thống.</p>
-    <div class="grid3" style="margin-top:1.5rem">
-      <article class="card"><h3>📆 Lịch âm dương</h3><p class="muted">Xem ngày âm, can chi, tiết khí.</p></article>
-      <article class="card"><h3>✨ Giờ hoàng đạo</h3><p class="muted">Biết giờ tốt trong ngày.</p></article>
-      <article class="card"><h3>🔮 Xem quẻ</h3><p class="muted">Gợi ý quẻ theo ngày.</p></article>
-      <article class="card"><h3>🙏 Văn khấn</h3><p class="muted">Kho văn khấn theo dịp.</p></article>
-      <article class="card"><h3>📋 Hồ sơ khấn</h3><p class="muted">Lưu thông tin gia đình, ngày giỗ.</p></article>
-      <article class="card"><h3>🔔 Nhắc sự kiện</h3><p class="muted">Không bỏ lỡ giỗ, lễ, Tết.</p></article>
-    </div>
-  </section>
-
-  <section class="cta">
+  <section id="features" class="section">
     <div class="wrap">
-      <h2>Bắt đầu miễn phí hôm nay</h2>
-      <p>Tải Lịch Âm và dùng lịch âm dương trên điện thoại.</p>
+      <div class="section-head">
+        <h2>Một ngày theo lịch truyền thống</h2>
+        <p>Tra cứu nhanh trên điện thoại — không cần sổ giấy, không bỏ lỡ ngày giỗ hay giờ đẹp.</p>
+      </div>
+      <div class="feature-list">
+        <div class="feature-row">
+          <h3>Lịch âm dương</h3>
+          <p>Xem ngày âm, can chi, tiết khí và chuyển đổi dương ↔ âm rõ ràng.</p>
+        </div>
+        <div class="feature-row">
+          <h3>Giờ hoàng đạo</h3>
+          <p>Biết khung giờ tốt trong ngày để việc quan trọng.</p>
+        </div>
+        <div class="feature-row">
+          <h3>Văn khấn & hồ sơ</h3>
+          <p>Kho văn khấn theo dịp, lưu hồ sơ gia đình và ngày giỗ.</p>
+        </div>
+        <div class="feature-row">
+          <h3>Nhắc sự kiện</h3>
+          <p>Nhắc theo âm lịch; có thể đồng bộ sang Calendar trên điện thoại.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Bắt đầu miễn phí</h2>
+      <p>Cài Lịch Vạn Niên và mang lịch truyền thống theo bên mình mỗi ngày.</p>
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.lighton.calendar" target="_blank" rel="noopener">Tải trên Google Play</a>
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <p style="color:#78350f;font-weight:700">Lịch Âm</p>
-        <p class="muted">Lịch vạn niên trên điện thoại — xem ngày âm dương, giờ hoàng đạo, văn khấn và sự kiện.</p>
+        <p class="footer-brand">Lịch Vạn Niên</p>
+        <p class="footer-note">Ứng dụng lịch vạn niên — ngày âm dương, giờ hoàng đạo, văn khấn và sự kiện.</p>
       </div>
       <div>
-        <p><strong>Liên kết</strong></p>
-        <p><a href="./">Trang chủ</a></p>
-        <p><a href="support/">Hỗ trợ</a></p>
-        <p><a href="privacy/">Chính sách bảo mật</a></p>
-        <p><a href="terms/">Điều khoản sử dụng</a></p>
+        <strong>Liên kết</strong>
+        <a href="./">Trang chủ</a>
+        <a href="support/">Hỗ trợ</a>
+        <a href="privacy/">Chính sách bảo mật</a>
+        <a href="terms/">Điều khoản sử dụng</a>
       </div>
       <div>
-        <p><strong>Tải ứng dụng</strong></p>
-        <p><a href="https://play.google.com/store/apps/details?id=com.lighton.calendar" target="_blank" rel="noopener">Google Play</a></p>
-        <p class="muted">© 2026 Lighton. All rights reserved.</p>
+        <strong>Tải ứng dụng</strong>
+        <a href="https://play.google.com/store/apps/details?id=com.lighton.calendar" target="_blank" rel="noopener">Google Play</a>
+        <p class="footer-note" style="margin-top:1rem">© 2026 Lighton</p>
       </div>
     </div>
   </footer>
