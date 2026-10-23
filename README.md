@@ -40,14 +40,20 @@ Xem hướng dẫn chi tiết: [DEPLOY.md](./DEPLOY.md)
 
 ## app-ads.txt
 
-File tĩnh tại `public/app-ads.txt`:
+Cùng một dòng (IAB), giữ đồng bộ ở `docs/app-ads.txt` (GitHub Pages) và `public/app-ads.txt` (Rails):
 
 ```
 google.com, pub-9029191201631183, DIRECT, f08c47fec0942fa0
 ```
 
-Sau khi deploy, Google AdMob cần truy cập được:
+**GitHub Pages (hiện tại)**
 
-`https://<domain-của-bạn>/app-ads.txt`
+| URL | Vai trò |
+|-----|---------|
+| https://lightonalan.github.io/calendar_web/ | Marketing / developer website trên store |
+| https://lightonalan.github.io/calendar_web/app-ads.txt | File trên project site |
+| https://lightonalan.github.io/app-ads.txt | **AdMob crawl** (luôn lấy root của host, bỏ path `/calendar_web`) |
 
-**Lưu ý:** Domain trong AdMob phải khớp domain website (không dùng subdomain khác trừ khi cấu hình riêng).
+Không dùng `github.com/.../app-ads.txt` — đó là trang repo, không phải site publish.
+
+Sau khi sửa file: push → đợi Pages cập nhật → AdMob → **Verify app** → check for updates.

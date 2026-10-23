@@ -119,7 +119,7 @@ Trên Render:
 
 ## Bước 4: Cấu hình app-ads.txt (Google AdMob)
 
-File tại `website/public/app-ads.txt`:
+File tại `public/app-ads.txt` (Rails) và `docs/app-ads.txt` (GitHub Pages):
 
 ```
 google.com, pub-9029191201631183, DIRECT, f08c47fec0942fa0
@@ -128,22 +128,25 @@ google.com, pub-9029191201631183, DIRECT, f08c47fec0942fa0
 ### Kiểm tra sau deploy
 
 ```bash
+# Domain riêng (Render / custom domain)
 curl -I https://<domain-của-bạn>/app-ads.txt
 curl https://<domain-của-bạn>/app-ads.txt
+
+# GitHub Pages — AdMob luôn crawl ROOT host (bỏ path /calendar_web)
+curl -I https://lightonalan.github.io/app-ads.txt
+curl https://lightonalan.github.io/app-ads.txt
 ```
 
-Phải trả về **200** và nội dung đúng một dòng.
+Phải trả về **200**, `content-type: text/plain`, đúng một dòng publisher.
 
 ### Trong AdMob Console
 
 1. Vào https://admob.google.com
-2. **Apps** → chọn app Android
-3. **App settings** → **App-ads.txt**
-4. Nhập **Developer website URL**: `https://<domain-của-bạn>`
-5. Bấm **Verify** — Google crawl file (có thể mất vài giờ đến 24h)
+2. **Apps** → chọn app
+3. **App settings** → **Verify app** (UI mới không còn tab “App-ads.txt” riêng)
+4. Crawl / check for updates — có thể mất vài phút đến 24h
 
-**Quan trọng:** URL trong Google Play Console (Developer website) cũng nên trùng domain này.
-
+**Quan trọng:** Website trên Play / Marketing URL trên App Store phải cùng **host** với nơi phục vụ `/app-ads.txt` (ví dụ `lightonalan.github.io`). Path `/calendar_web/` không ảnh hưởng URL crawl.
 ---
 
 ## Bước 5: Liên kết với Google Play & App Store
